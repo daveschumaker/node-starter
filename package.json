@@ -1,0 +1,50 @@
+{
+    "name": "node-starter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "bin/main.js",
+    "scripts": {
+        "build": "babel bin --out-dir ./dist --source-maps",
+        "dev": "nodemon --exec babel-node ./bin/main.js",
+        "start": "node ./dist/main.js",
+        "test": "mocha 'bin/**/*.tests.js'"
+    },
+    "keywords": [
+        "boilerplate",
+        "node",
+        "starter"
+    ],
+    "author": "Dave Schumaker <dave@dave.ly> (https://dave.ly)",
+    "license": "MIT",
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ]
+    },
+    "mocha": {
+        "require": [
+            "@babel/register",
+            "chai/register-expect"
+        ]
+    },
+    "prettier": {
+        "arrowParens": "avoid",
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false,
+        "printWidth": 100,
+        "semi": true,
+        "singleQuote": true,
+        "tabWidth": 4,
+        "trailingComma": "none"
+    },
+    "devDependencies": {
+        "@babel/cli": "7.8.3",
+        "@babel/core": "7.8.3",
+        "@babel/node": "7.8.3",
+        "@babel/preset-env": "7.8.3",
+        "@babel/register": "7.8.3",
+        "chai": "4.2.0",
+        "mocha": "7.0.1",
+        "nodemon": "^2.0.2"
+    }
+}
